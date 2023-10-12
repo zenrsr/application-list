@@ -1,0 +1,31 @@
+.list-item {
+  margin: 10px;
+  border: 1px solid #9897f0;
+  border-radius: 25px;
+  background-color: transparent;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.item-heading {
+  color: #171f46;
+  font-size: 16px;
+}
+.star-button {
+  align-self: flex-start;
+  margin-top: 10px;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.item-date {
+  font-size: 13px;
+  color: #b5b7c4;
+  font-weight: 700;
+}
