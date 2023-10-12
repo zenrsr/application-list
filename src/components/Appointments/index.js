@@ -65,9 +65,8 @@ class Appointments extends Component {
 
   render() {
     const {nameInput, dateInput, appointmentList, starButton} = this.state
-    const filteredList = {
-      appointmentList: appointmentList.filter(each => each.isStarred === true),
-    }
+    const filteredList = appointmentList.filter(each => each.isStarred === true)
+
     const activeStarredButton = starButton ? 'active' : ''
 
     return (
@@ -77,21 +76,27 @@ class Appointments extends Component {
             <div className="appointment-container">
               <form className="form" onSubmit={this.addAppointment}>
                 <h1 className="heading"> Add Appointment</h1>
-                <p className="title">TITLE</p>
+                <label htmlFor="titleId" className="title">
+                  TITLE
+                </label>
                 <input
                   type="text"
                   className="title-input"
                   value={nameInput}
                   placeholder="Title"
                   onChange={this.onChangeTitle}
+                  id="titleId"
                 />
-                <p className="date">DATE</p>
+                <label htmlFor="dateId" className="date">
+                  DATE
+                </label>
                 <input
                   type="date"
                   className="date-input"
                   value={dateInput}
                   placeholder="dd/mm/yy"
                   onChange={this.onChangeDate}
+                  id="dateId"
                 />
                 <button type="submit" className="add-button">
                   Add
@@ -112,7 +117,7 @@ class Appointments extends Component {
               className={` starred-button ${activeStarredButton} `}
               onClick={this.toggleStarred}
             >
-              starred
+              Starred
             </button>
           </div>
           <ul className="list-container" type="none">
